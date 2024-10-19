@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("Login Credential",
                         "Username:" + username +
                                 "\nPassword: " + password);
+
+                setContentView(R.layout.activity_profile);
             }
         });
 
