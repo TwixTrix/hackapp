@@ -1,5 +1,6 @@
 package com.example.hackapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     EditText u_input, p_input;
-     Button loginBtn;
+    Button loginBtn;
 
 
 
@@ -27,19 +28,29 @@ public class MainActivity extends AppCompatActivity {
 
         u_input = findViewById(R.id.username_input);
         p_input = findViewById(R.id.password_input);
+
         loginBtn = findViewById(R.id.login_btn);
         loginBtn.setOnClickListener(new View.OnClickListener() {
+
+
+            //username and password input
+            String username = u_input.getText().toString();
+            String password = p_input.getText().toString();
             @Override
             public void onClick(View v) {
-                String username = u_input.getText().toString();
-                String password = p_input.getText().toString();
 
+
+                checkCredentials(username,password);
                 //login credential
                 Log.i("Login Credential",
                         "Username:" + username +
                                 "\nPassword: " + password);
 
-                setContentView(R.layout.activity_profile);
+
+
+                //setContentView(R.layout.activity_profile);
+                Intent intent = new Intent(MainActivity.this,Profile.class);
+                startActivity(intent);
             }
         });
 
@@ -49,5 +60,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    private void checkCredentials(String username,String password){
+
+
     }
 }
