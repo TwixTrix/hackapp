@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/start"
+            android:id="@+id/rider_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Starting address" />
@@ -45,13 +45,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/destination"
+            android:id="@+id/rider_destination"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/rider_enter"
         android:layout_width="164dp"
         android:layout_height="102dp"
         android:text="Enter"
@@ -61,36 +61,38 @@
         app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
     <EditText
-        android:id="@+id/editTextTime"
+        android:id="@+id/rider_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="time"
+        android:hint="time(24hr:min)"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/rider_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="date"
+        android:hint="date(mm/dd/year)"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+        app:layout_constraintTop_toBottomOf="@+id/rider_time" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/driver_repeat"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="187dp"
         android:layout_marginTop="15dp"
         android:text="repeat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/rider_date" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
