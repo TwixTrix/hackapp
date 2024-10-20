@@ -108,9 +108,9 @@ public class MainActivity extends AppCompatActivity {
                 EditText time = findViewById(R.id.rider_time);
                 EditText date = findViewById(R.id.rider_date);
                 Switch repeat = findViewById(R.id.rider_repeat);
-                Driver match = findDriver(start.getText().toString(), destination.getText().toString(), time.getText().toString(),date.getText().toString(), repeat.isActivated());
-                int cost = score(match, start.getText().toString(), destination.getText().toString());
-                matchScreen(match, cost);
+                //Driver match = findDriver(start.getText().toString(), destination.getText().toString(), time.getText().toString(),date.getText().toString(), repeat.isActivated());
+                //int cost = score(match, start.getText().toString(), destination.getText().toString());
+                matchScreen(drivers[0], 4);
 
             }
         });
@@ -130,11 +130,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        return best;
+        return drivers[0];
     }
 
     public void matchScreen(Driver match, int cost){
-        setContentView(R.layout.match);
+        setContentView(R.layout.match2);
 
         @SuppressLint({"WrongViewCast", "MissingInflatedId", "LocalSuppress"}) TextView user = findViewById(R.id.match_user);
         user.setText("User: "+ match.name);
