@@ -57,7 +57,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void openDriver(View view){
         setContentView(R.layout.activity_details_driver);
-
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button enter = findViewById(R.id.driver_enter);
+        enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText start = findViewById(R.id.driver_start);
+                EditText destination = findViewById(R.id.driver_destination);
+                EditText time = findViewById(R.id.driver_time);
+                EditText date = findViewById(R.id.driver_date);
+                Switch repeat = findViewById(R.id.driver_repeat);
+                Driver match = findDriver(start.getText().toString(), destination.getText().toString(), time.getText().toString(),date.getText().toString(), repeat.isActivated());
+                confirmDriver();
+            }
+        });
     }
     public void openRider(View view){
         setContentView(R.layout.rider_details);
@@ -85,5 +97,13 @@ public class MainActivity extends AppCompatActivity {
     public void matchScreen(){
         setContentView(R.layout.match);
 
+    }
+
+    public void openHome(View view){
+        setContentView(R.layout.activity_home);
+    }
+
+    public void confirmDriver(){
+        setContentView(R.layout.activity_confirm_driver);
     }
 }
