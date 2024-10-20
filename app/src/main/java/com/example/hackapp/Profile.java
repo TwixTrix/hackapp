@@ -13,9 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Profile extends AppCompatActivity {
     Button backBtn;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -29,7 +29,7 @@ public class Match extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent intent = new Intent(Match.this,MainActivity.class);
+                Intent intent = new Intent(Match.this,Rider.class);
                 startActivity(intent);
 
             }

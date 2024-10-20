@@ -9,17 +9,6 @@
     tools:context=".Match">
 
 
-    <!-- <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="147dp"
-        tools:layout_editor_absoluteX="147dp"
-        >-->
-
 
     <TextView
         android:id="@+id/matchText"
@@ -40,28 +29,28 @@
         android:id="@+id/user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:text="USER"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/time_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.554" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/price"
-        android:layout_width="51dp"
-        android:layout_height="30dp"
-        android:text="price"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
+        android:text="PRICE"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.758"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintStart_toEndOf="@+id/user"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189" />
+        app:layout_constraintVertical_bias="0.171" />
 
     <TextView
         android:id="@+id/pickup"
@@ -73,10 +62,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTime3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/matchText"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.964" />
 
     <TextView
         android:id="@+id/date_text"
@@ -87,10 +76,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/pickup"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/match"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.219" />
 
     <TextView
         android:id="@+id/time_text"
@@ -101,10 +90,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308" />
+        app:layout_constraintVertical_bias="0.319" />
 
     <Button
         android:id="@+id/m_bckbtn"
@@ -118,21 +107,21 @@
 
     <EditText
         android:id="@+id/date"
-        android:layout_width="124dp"
-        android:layout_height="53dp"
+        android:layout_width="127dp"
+        android:layout_height="21dp"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toEndOf="@+id/date_text"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintVertical_bias="0.369" />
 
     <EditText
         android:id="@+id/editTextTime3"
-        android:layout_width="122dp"
-        android:layout_height="42dp"
+        android:layout_width="115dp"
+        android:layout_height="28dp"
         android:layout_marginTop="87dp"
         android:ems="10"
         android:inputType="time"
@@ -141,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/time_text"
         app:layout_constraintTop_toTopOf="@+id/user_match"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/user_match"
@@ -160,16 +149,14 @@
         android:id="@+id/price_match"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="106dp"
         android:text="price_match"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/date"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintHorizontal_bias="0.84"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.25" />
 
 
     <!-- </LinearLayout>-->
